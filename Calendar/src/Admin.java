@@ -10,7 +10,6 @@ public class Admin extends User{
 	
 	Admin(String fullName, String email) {
 		super(fullName, email);
-		// TODO Auto-generated constructor stub
 	}
 
 	
