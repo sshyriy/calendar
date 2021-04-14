@@ -1,29 +1,36 @@
 
-public class Account extends User{
-	// Name
-	//Email
-	
+/**
+ * @author Olya
+ *
+ */
+public class Account {
+	private String name;
+	private String email;	
+	private String password;
 	private String title;
 	Calendar calendar;
+	Schedule schedule;
 	private String calendarUserName;
 	
 	
 
 	Account(String fullName, String email, String password) {
-		super(fullName, email);
+		this.name = fullName;
+		this.email = email;
 		this.password = password;
 		calendar = new Calendar();
 		calendarUserName = setCalendarUserName();
+		schedule= new Schedule();
 		
 	}
-	String password;
+	
 	public String getPassword() {
 		return password;
 	}
 
 
 
-	public void setPassword(String password) {
+	public void resetPassword(String password) {
 		this.password = password;
 	}
 
@@ -40,6 +47,14 @@ public class Account extends User{
 	}
 
 
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public Calendar getCalendar() {
 		return calendar;
@@ -60,10 +75,18 @@ public class Account extends User{
 
 
 	public String setCalendarUserName() {
-		String userName =this.title + this.getName(); /// 
+		String userName =this.title + this.name; /// 
 		
 		
 		return userName;
+	}
+	
+	public String toString() {
+		return "User name :"+ name+ "\n "
+			+ " user email :"+ email+ "\n "
+			+ " Calendar user ID: "+ calendarUserName +"\n "
+			+ " User schedule: "+ schedule.toString();
+		
 	}
 
 
