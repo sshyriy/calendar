@@ -10,6 +10,8 @@ public class Guest extends User{
 	
 	Guest(String fullName, String email ,String comment) {
 		super(fullName, email);
+		this.comment = comment;
+		
 		
 	}
 	

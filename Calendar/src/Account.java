@@ -14,8 +14,8 @@ public class Account {
 	
 	
 
-	Account(String fullName, String email, String password) {
-		this.name = fullName;
+	Account(String firstName,String lastName, String email, String password) {
+		this.name = firstName +" " + lastName;
 		this.email = email;
 		this.password = password;
 		calendar = new Calendar();

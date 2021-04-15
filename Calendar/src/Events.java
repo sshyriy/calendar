@@ -5,14 +5,14 @@ public class Events {
 	Object locationZoom;
 	String externalLink;
 	int max_Group_Size;
+	String descritprion;
 	
-	public Events(String name, Calendar date, Object locationZoom, String externalLink, int max_Group_Size) {
+	
+	public Events(String name, Calendar date) {
 		super();
 		this.name = name;
 		this.date = date;
-		this.locationZoom = locationZoom;
-		this.externalLink = externalLink;
-		this.max_Group_Size = max_Group_Size;
+		
 	}
 
 	public String getName() {

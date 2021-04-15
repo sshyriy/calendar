@@ -2,13 +2,39 @@ import java.sql.Time;
 import java.util.HashMap;
 
 public class Schedule  {
-	ScheduleManager schMan;
+	ScheduleManager scheduleManager;
+	private Availability time;
+	private HashMap<Time, Events> events = new HashMap<>();
 	
 	public Schedule() {
 		
 	}
-	private HashMap<Time, Events> events = new HashMap<>();
-	private Availability time;
+	
+	
+	
+	
+	public HashMap<Time, Events> getEvents() {
+		return events;
+	}
+
+
+
+	public void setEvents(HashMap<Time, Events> events) {
+		this.events = events;
+	}
+
+
+	public Availability getTime() {
+		return time;
+	}
+
+
+
+	public void setTime(Availability time) {
+		this.time = time;
+	}
+
+
 	
 	
 	
