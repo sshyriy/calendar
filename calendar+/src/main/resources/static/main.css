@@ -1,0 +1,57 @@
+.top a{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: xxx-large;
+
+    color: #696969;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}
+.signUp a{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    color: #000000;
+    position: right;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: large;
+    text-decoration: none;
+
+}
+.Log a{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    color: #000000;
+    position: right;
+    position: absolute;
+    top: 10px;
+    right: 130px;
+    font-size: large;
+    text-decoration: none;
+
+}
+
+.welcome{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    color: #A9A9A9;
+    font-size: large;
+    line-height: 3.5em;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+top:active{
+    background-color: yellow;
+}
+.body{
+    text-align: right;
+    object-fit: scale-down;
+    text-align: bottom;
+
+}
