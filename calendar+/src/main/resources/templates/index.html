@@ -2,18 +2,55 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Welcome to CodeJava Home</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
-<div class="container text-center">
-    <h1>Welcome to CalendarPlus</h1>
-    <h3><a th:href="/@{/users}">List of Users</a></h3>
-    <h3><a th:href="/@{/register}">Register</a></h3>
-    <h3><a th:href="/@{/login}">Login</a></h3>
-</div>
+    <div class="home">
+        <section class="top">
+            <header>
+                <a href="index.html">Calendar+</a>
 
+            </header>
+    </div>
+    <div class="signUp">
+        <nav>
+            <ul>
+                <h3><li><a th:href="/@{/register}"  <a href="signup_form.html">Sign Up</a></li></h3>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="Log">
+        <nav>
+            <ul>
+
+                <li><a th:href="/@{/login}" <a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<div class="welcome">
+    <section class="text1">
+        + Create an event you would like to schedule
+    </section>
+    <section class="text2">
+        + Set up availability preferences
+    </section>
+    <section class="text3">
+        + Invite others to your event with a link
+    </section>
+    <section class="text4">
+        + They pick a time and event is added to you calendar
+    </section>
+    <section class="text5">
+        + It's simple and free
+    </section>
+
+</div>
+<section class="body">
+    <img src="https://github.com/sshyriy/calendar/blob/main/calendar+/waiting.gif?raw=true" alt="calendar clock">
+</section>
 </body>
+
 </html>
