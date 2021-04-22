@@ -1,60 +1,49 @@
 <!DOCTYPE html>
+<html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Sign Up - CalendarPlus</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/logIn.css">
+</head>
 
-    <link rel="stylesheet" href="/static/logIn.css">
+<div class="home">
+    <section class = "top">
+        <header>
+            <a href="index.html">Calendar+</a>
 
+        </header>
+</div>
+<div class = "text">
+    Need to make an account?
+</div>
+<div class = "logIn">
+    <nav>
+        <ul>
+            <h3><li><a th:href="/@{/register}" <a href="signup_form.html">Sign Up</a></li></h3>
 
-
-
+        </ul>
+    </nav>
+</div>
 </head>
 <body>
-<div class="container text-center">
-    <div>
-        <h1>User Registration - Sign Up</h1>
-    </div>
-    <form th:action="@{/process_register}" th:object="${user}"
-          method="post" style="max-width: 600px; margin: 0 auto;">
-        <div class="m-3">
-            <div class="form-group row">
-                <label class="col-4 col-form-label">First Name: </label>
-                <div class="col-8">
-                    <input type="text" th:field="*{firstName}" class="form-control"
-                           required minlength="2" maxlength="20"/>
-                </div>
-            </div>
+<div class="container">
 
-            <div class="form-group row">
-                <label class="col-4 col-form-label">Last Name: </label>
-                <div class="col-8">
-                    <input type="text" th:field="*{lastName}" class="form-control"
-                           required minlength="2" maxlength="20" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-4 col-form-label">Enter your email: </label>
-                <div class="col-8">
-                    <input type="email" th:field="*{email}" class="form-control" required />
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-4 col-form-label">Enter your password </label>
-                <div class="col-8">
-                    <input type="password" th:field="*{password}" class="form-control"
-                           required minlength="6" maxlength="10"/>
-                </div>
-            </div>
-
-
-
-            <div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </div>
-        </div>
+    <form action= = "">
+    <label for="email"> Enter your email </label>
+    <input type="text" name= "email" id="email">
     </form>
+    <form action= = "">
+    <label for="password"> Enter your password</label>
+    <input type="text" name= "password" id="password">
+    </form>
+    <div class = "button">
+        <input type="button" value="Log In">
+    </div>
+
+
 </div>
 </body>
 </html>
