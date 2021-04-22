@@ -1,0 +1,72 @@
+.top a{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: xxx-large;
+
+    color: #696969;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}
+.logIn a{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    color: #000000;
+    position: right;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+    font-size: large;
+    text-decoration: none;
+
+
+}
+.text{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    color:  #A9A9A9;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-color: #F5F5F5;
+    text-align: center;
+    padding:2em;
+    border-radius: 3em;
+    width: 40%;
+    position: absolute;
+    top: 150px;
+    right: 350px;
+
+}
+label{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    margin-top: 1em;
+    color: #696969;
+    margin-bottom: .5em;
+    display: block;
+    font-weight: bold;
+
+}
+input[type=text]{
+    border: 1px solid grey;
+    width: 40%;
+    padding: 1em;
+    border-radius: 3em;
+
+}
+input[type=button]{
+    margin-top: 2em;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 3em;
+    width: 40%;
+    font-size: large;
+    padding: 1em 0;
+}
