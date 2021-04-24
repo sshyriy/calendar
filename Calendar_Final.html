@@ -1,0 +1,154 @@
+<script>
+function value_of_day(value_of_day) {
+    document.write("<div class='calendar_columns'>" + value_of_day + "</div>");
+  }
+function table_fill_function(month, length_of_month, value_of_month_index) {
+    day = 1;
+    document.write("<div class='c-main c-main-" + value_of_month_index + "'>");
+
+    document.write("<div class='calendar_row'>");
+    value_of_day("Sun");
+    value_of_day("Mon");
+    value_of_day("Tue");
+    value_of_day("Wed");
+    value_of_day("Thu");
+    value_of_day("Fri");
+    value_of_day("Sat");
+    document.write("</div>");
+
+    document.write("<div class='calendar_row'>");
+    for (var i = 1; i < start_day; i++) {
+      if (start_day > 7) {
+      } else {
+        document.write("<div class='calendar_cell'></div>");
+      }
+    }
+
+    for (var i = start_day; i < 8; i++) {
+      document.write(
+        "<div data-day='2021-" +
+          value_of_month_index +
+          "-0" +
+          day +
+          "'class='calendar_cell'><p>" +
+          day +
+          "</p></div>"
+      );
+      day++;
+    }
+    document.write("</div>");
+
+    while (day <= length_of_month) {
+      document.write("<div class='calendar_row'>");
+      for (var i = 1; i <= 7 && day <= length_of_month; i++) {
+        if (day >= 1 && day <= 9) {
+          document.write(
+            "<div data-day='2021-" +
+              value_of_month_index +
+              "-0" +
+              day +
+              "'class='calendar_cell'><p>" +
+              day +
+              "</p></div>"
+          );
+          day++;
+        } else {
+          document.write(
+            "<div data-day='2021-" +
+              value_of_month_index +
+              "-" +
+              day +
+              "' class='calendar_cell'><p>" +
+              day +
+              "</p></div>"
+          );
+          day++;
+        }
+      }
+      document.write("</div>");
+      start_day = i;
+    }
+
+    document.write("</div>");
+  }
+</script>
+<header>
+  <div class="wrapper">
+    <div class="c-monthyear">
+    <div class="c-month">
+        <span id="prev" class="prev fa fa-angle-left" aria-hidden="true"></span>
+        <div id="c-paginator">
+          <span class="calendar_paginator_for_month">JANUARY</span>
+          <span class="calendar_paginator_for_month">FEBRUARY</span>
+          <span class="calendar_paginator_for_month">MARCH</span>
+          <span class="calendar_paginator_for_month">APRIL</span>
+          <span class="calendar_paginator_for_month">MAY</span>
+          <span class="calendar_paginator_for_month">JUNE</span>
+          <span class="calendar_paginator_for_month">JULY</span>
+          <span class="calendar_paginator_for_month">AUGUST</span>
+          <span class="calendar_paginator_for_month">SEPTEMBER</span>
+          <span class="calendar_paginator_for_month">OCTOBER</span>
+          <span class="calendar_paginator_for_month">NOVEMBER</span>
+          <span class="calendar_paginator_for_month">DECEMBER</span>
+        </div>
+        <span id="next" class="next fa fa-angle-right" aria-hidden="true"></span>
+      </div>
+      <span class="calendar_paginator_for_year">2021</span>
+    </div>
+    <div class="c-sort">
+      <a class="o-btn c-today__btn" href="javascript:;">Calendar +</a>
+    </div>
+  </div>
+</header>
+<div class="wrapper">
+  <div class="c-calendar">
+    <div class="c-calendar__style c-aside">
+      <a class="c-add o-btn js-event__add" href="javascript:;">Add event <span class="fa fa-plus"></span></a>
+      <div class="c-aside__day">
+        <span class="c-aside__num"></span> <span class="c-aside__month"></span>
+      </div>
+      <div class="c-aside__eventList">
+      </div>
+    </div>
+    <div class="c-cal__container c-calendar__style">
+      <script>
+      
+      // CAHNGE the below variable to the CURRENT YEAR
+      year = 2021;
+
+      // first day of the week of the new year
+      today = new Date("January 1, " + year);
+      start_day = today.getDay() + 1;
+      table_fill_function("January", 31, "01");
+      table_fill_function("February", 29, "02");
+      table_fill_function("March", 31, "03");
+      table_fill_function("April", 30, "04");
+      table_fill_function("May", 31, "05");
+      table_fill_function("June", 30, "06");
+      table_fill_function("July", 31, "07");
+      table_fill_function("August", 31, "08");
+      table_fill_function("September", 30, "09");
+      table_fill_function("October", 31, "10");
+      table_fill_function("November", 30, "11");
+      table_fill_function("December", 31, "12");
+      </script>
+    </div>
+  </div>
+
+  <div class="c-event__creator c-calendar__style js-event__creator">
+    <a href="javascript:;" class="o-btn js-event__close">Exit <span class="fa fa-close"></span></a>
+    <form id="addEvent">
+      <input placeholder="Event name" type="text" name="name">
+      <input type="date" name="date">
+      <textarea placeholder="Notes" name="notes" cols="30" rows="10"></textarea>
+      <select name="tags">
+          <option value="event">Event</option>
+          <option value="Anniversary">Anniversary</option>
+          <option value="Holiday">Holiday</option>
+          <option value="Other">Meeting</option>
+        </select>
+    </form>
+    <br>
+    <a href="javascript:;" class="o-btn js-event__save">Add to calendar <span class="fa fa-save"></span></a>
+  </div>
+</div>
